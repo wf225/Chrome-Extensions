@@ -1,25 +1,23 @@
 {
     "manifest_version": 2,
-    "name":    "Page Refresh and Email Notification",
+    "name":    "亲子年卡预约",
     "version": "0.0.1",
     "background": {
         "persistent": false,
         "scripts": ["background.js"]
     },
     "content_scripts": [{
-        "matches": ["http://www.qjtra.com/*"],
+        "matches": ["https://github.com/wf225/*"],
         "js":      ["jquery.min.js", "content.js"]
     }],
     "browser_action": {
-        // "default_popup": "popup.html",
+        "default_popup": "popup.html",
         "default_title": "Page Refresh Email",
         "default_icon" : "icon.png"
     },
     "permissions": [
         "alarms",
         "tabs",
-        // "storage",
-        // "bookmarks",
         "activeTab"
     ]
 }
